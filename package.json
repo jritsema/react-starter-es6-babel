@@ -6,8 +6,10 @@
     ]
   },
   "scripts": {
-    "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
-    "start": "ecstatic -p 8000 public",
+    "start": "open public/index.html",
+    "build": "browserify main.jsx > public/bundle.js",
+    "build-prod": "NODE_ENV=production browserify main.jsx | uglifyjs -cm > public/bundle.js",
+    "start": "ecstatic -p 8000 public & open http://localhost:8000",
     "watch": "watchify main.js -o public/bundle.js -dv"
   },
   "dependencies": {
@@ -16,6 +18,8 @@
     "ecstatic": "~0.8.0",
     "react": "~0.13.3",
     "uglify-js": "^2.4.24",
-    "watchify": "^3.2.3"
+    "watchify": "^3.2.3",
+    "react": "~0.13.3",
+    "react-bootstrap": "^0.25.2"
   }
 }
