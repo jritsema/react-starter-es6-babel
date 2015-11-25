@@ -9,7 +9,7 @@
     "build": "browserify main.jsx > public/bundle.js",
     "build-prod": "NODE_ENV=production browserify main.jsx | uglifyjs -cm > public/bundle.js",
     "start": "ecstatic -p 8000 public & open http://localhost:8000",
-    "watch": "watchify main.js -o public/bundle.js -dv"
+    "watch": "watchify main.jsx -o public/bundle.js -dv"
   },
   "dependencies": {
     "babelify": "^6.1.3",
