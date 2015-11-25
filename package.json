@@ -1,12 +1,11 @@
 {
-  "name": "react-starter-es6-babel",
+  "name": "react-starter-es6-babel-bootstrap",
   "browserify": {
     "transform": [
       "babelify"
     ]
   },
   "scripts": {
-    "start": "open public/index.html",
     "build": "browserify main.jsx > public/bundle.js",
     "build-prod": "NODE_ENV=production browserify main.jsx | uglifyjs -cm > public/bundle.js",
     "start": "ecstatic -p 8000 public & open http://localhost:8000",
